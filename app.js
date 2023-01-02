@@ -14,6 +14,10 @@ app.use((req, res, next) => {
     next();
 });
 
+app.use('/', (req, res) => {
+    res.json({message: 'works!'});
+})
+
 app.use('/api/news', newsRoutes);
 
 app.use((req, res, next) => {
